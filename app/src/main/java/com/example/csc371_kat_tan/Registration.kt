@@ -32,6 +32,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.csc371_kat_tan.ui.theme.FugazOne
 import com.example.csc371_kat_tan.ui.theme.Pink1
@@ -226,4 +227,10 @@ fun Registration(context: Context) {
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun RegisterScreenPreview() {
+    Registration(context = LocalContext.current)
 }

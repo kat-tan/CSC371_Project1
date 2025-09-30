@@ -2,6 +2,7 @@ package com.example.csc371_kat_tan
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Layout
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -17,7 +18,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.csc371_kat_tan.ui.theme.FugazOne
@@ -58,10 +62,17 @@ fun Homepage(context: Context) {
         ) {
 
         Text(
-            modifier = Modifier.padding(5.dp),
+            modifier = Modifier.padding(5.dp).align(Alignment.CenterHorizontally),
             text = "You are signed in!",
             fontSize = 50.sp,
             fontFamily = FugazOne,
+            textAlign = TextAlign.Center
         )
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun HomepagePreview() {
+    Homepage(context = LocalContext.current)
 }

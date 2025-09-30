@@ -33,6 +33,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.csc371_kat_tan.ui.theme.Blue1
@@ -191,8 +192,14 @@ fun StartUp(context: Context) {
         }
     }
 
-
 }
+
+@Preview(showBackground = true)
+@Composable
+fun StartUpPreview() {
+    StartUp(context = LocalContext.current)
+}
+
 
 
 
