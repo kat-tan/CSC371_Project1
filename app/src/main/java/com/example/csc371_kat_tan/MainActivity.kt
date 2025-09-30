@@ -53,7 +53,6 @@ class MainActivity : ComponentActivity() {
         val sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
         val isFirstLaunch = sharedPreferences.getBoolean("isFirstLaunch", true)
 
-
         // If it's the first launch, set showSplash to true to show splash
         if (isFirstLaunch) {
             // Set first launch flag to false immediately
@@ -75,7 +74,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// Screen to pop up at inital launch
+// Screen to pop up at initial launch
 @Composable
 fun SplashScreen(onTimeout: () -> Unit) {
     // To keep track of whether the splash screen has been shown or not
@@ -88,11 +87,15 @@ fun SplashScreen(onTimeout: () -> Unit) {
     // If it's the first launch, show splash screen
     if (isFirstLaunch) {
         Log.d("SplashScreen", "Splash screen showing for first time")
+
         LaunchedEffect(Unit) {
 
             Log.d("SplashScreen", "Delay started")
+
             delay(2000)
+
             Log.d("SplashScreen", "Delay finished, calling onTimeout()")
+
             onTimeout() // After the delay, hide the splash screen
 
             // Set the flag to false after the first launch
@@ -123,7 +126,6 @@ fun SplashScreen(onTimeout: () -> Unit) {
         onTimeout()
     }
 }
-
 
 
 // Composable for the Welcome screen with buttons to navigate to Registration or Log In

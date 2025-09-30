@@ -34,6 +34,7 @@ class Homepage : ComponentActivity() {
     }
 }
 
+//Should load after Log In Success
 @Composable
 fun Homepage(context: Context) {
     Box(

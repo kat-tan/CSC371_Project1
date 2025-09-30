@@ -76,7 +76,7 @@ fun LogIn(context: Context) {
     // Function to validate login credentials
     fun validateLogin(): Boolean {
         if (emailState.value.isEmpty() || passwordState.value.isEmpty()) return false
-        val sharedPreferences = context.getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+        val sharedPreferences = context.getSharedPreferences("UserPrefs", Context.MODE_PRIVATE) // Holds value in shared Preferences
         val storedEmail = sharedPreferences.getString("user_email", "")
         val storedPassword = sharedPreferences.getString("user_password", "")
 
