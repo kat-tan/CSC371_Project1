@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kathleen Tan Project 1</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="title_activity_log_in">LogIn</string>
+</resources>
