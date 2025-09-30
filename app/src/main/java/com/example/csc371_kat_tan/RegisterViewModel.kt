@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 
-// This class holds data
+// This class holds data to store user
 class RegisterViewModel : ViewModel() {
 
     // States for the registration fields

@@ -23,6 +23,7 @@ private val LightColorScheme = lightColorScheme(
     tertiary = Pink1
 )
 
+// Theme for the project
 @Composable
 fun CSC371_kat_tanTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
